@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f8ef7"/>
+      <stop offset="100%" stop-color="#9b5de5"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="#0d1224"/>
+  <rect width="32" height="32" rx="8" fill="url(#g)" opacity="0.18"/>
+  <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle"
+    font-family="system-ui, sans-serif" font-weight="800" font-size="13"
+    fill="url(#g)">ASR</text>
+</svg>

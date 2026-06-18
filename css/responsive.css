@@ -47,7 +47,7 @@
 }
 
 @media (max-width: 560px) {
-  .hero-name { font-size: clamp(2.8rem, 14vw, 3.8rem); }
+  .hero-name { font-size: clamp(2.8rem, 14vw, 3.8rem); white-space: normal; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .cta-primary, .cta-secondary { justify-content: center; }
   .exp-card { padding: 24px 20px 24px 48px; }
