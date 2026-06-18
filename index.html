@@ -3,382 +3,618 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Arka Saha Roy — Full Stack Developer & Computer Science Student based in West Bengal, India." />
-  <title>Arka Saha Roy — Full Stack Developer</title>
+  <meta name="description" content="Arka Saha Roy — Full Stack Developer & CS Student from West Bengal, India." />
+  <title>Arka Saha Roy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
 
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <span class="loader-bracket">{</span>
-      <span class="loader-text">loading</span>
-      <span class="loader-bracket">}</span>
-    </div>
+  <div id="loader" class="loader">
+    <div class="loader-ring"></div>
+    <span class="loader-label">arka.dev</span>
   </div>
 
-  <div class="noise-overlay"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">
-        <span class="logo-bracket">&lt;</span>arka<span class="logo-accent">/</span><span class="logo-bracket">&gt;</span>
+  <nav id="navbar" class="navbar">
+    <div class="nav-wrap">
+      <a href="#home" class="nav-brand">
+        <span class="brand-a">A</span><span class="brand-rest">rka.</span>
       </a>
-      <ul class="nav-links" id="navLinks">
+      <ul id="navLinks" class="nav-links">
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#hackathons" class="nav-link">Hackathons</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
         <li>
-          <a href="assets/resume/ARKA SAHA ROY.pdf" download class="nav-cta">Resume</a>
+          <a href="assets/resume/ARKA SAHA ROY.pdf" download class="btn-resume">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Resume
+          </a>
         </li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-      <div class="grid-lines"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">
-        <span class="dot"></span> Available for opportunities
+  <section id="home" class="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-glow hero-glow--purple"></div>
+    <div class="hero-glow hero-glow--blue"></div>
+    <div class="hero-glow hero-glow--cyan"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        Open to Internships & Collaborations
+      </div>
+
+      <h1 class="hero-heading">
+        <span class="hero-hello">Hi, I'm</span>
+        <span class="hero-name">Arka Saha Roy</span>
+        <span class="hero-role">
+          <span class="role-static">Full Stack</span>
+          <span class="role-animated">
+            <span class="role-word active">Developer</span>
+            <span class="role-word">Problem Solver</span>
+            <span class="role-word">CS Student</span>
+          </span>
+        </span>
+      </h1>
+
+      <p class="hero-sub">
+        I build things for the web — clean interfaces, robust backends, and everything in between. Based in <span class="hero-loc">West Bengal, India</span>.
       </p>
-      <h1 class="hero-name">Arka Saha Roy</h1>
-      <h2 class="hero-title">
-        <span class="title-line">Full Stack Developer</span>
-        <span class="title-divider"> / </span>
-        <span class="title-line title-line--accent">CS Student</span>
-      </h2>
-      <p class="hero-desc">
-        I build things for the web — clean interfaces, solid backends, and everything in between. Based in West Bengal, India.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="assets/resume/Arka_Saha_Roy_Resume.pdf" download class="btn btn-ghost">Download Resume</a>
-      </div>
-      <div class="hero-scroll-hint">
-        <span>scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </div>
-  </section>
 
-  <section class="about section" id="about">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">01 — About</span>
-        <h2 class="section-title">Who I am</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-image-wrap reveal">
-          <div class="about-image-frame">
-            <img src="assets/images/profile.jpg" alt="Arka Saha Roy" class="about-img" />
-            <div class="image-glow"></div>
-          </div>
-          <div class="about-badge glass">
-            <span class="badge-icon">⚡</span>
-            <div>
-              <strong>Open to Work</strong>
-              <small>Internships & Projects</small>
-            </div>
-          </div>
-        </div>
-        <div class="about-text reveal">
-          <p class="about-lead">
-            I'm a Computer Science student with a deep curiosity for how technology can solve real human problems.
-          </p>
-          <p>
-            My focus sits at the intersection of thoughtful UI design and reliable backend architecture. I started with curiosity about how websites worked and stayed for the problem-solving. Full Stack Development lets me own a feature end-to-end — from the pixel on screen to the database record behind it.
-          </p>
-          <p>
-            When I'm not coding, I'm researching healthcare tech, contributing to open-source experiments, or sketching out ideas for tools that haven't been built yet.
-          </p>
-          <div class="about-stats">
-            <div class="stat glass">
-              <strong>3+</strong>
-              <small>Projects Shipped</small>
-            </div>
-            <div class="stat glass">
-              <strong>5+</strong>
-              <small>Technologies</small>
-            </div>
-            <div class="stat glass">
-              <strong>∞</strong>
-              <small>Problems to Solve</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="skills section" id="skills">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">02 — Skills</span>
-        <h2 class="section-title">What I work with</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-category glass reveal">
-          <div class="skill-cat-header">
-            <span class="skill-icon">🖥</span>
-            <h3>Frontend</h3>
-          </div>
-          <ul class="skill-list">
-            <li class="skill-item">
-              <span class="skill-name">HTML5</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
-            </li>
-            <li class="skill-item">
-              <span class="skill-name">CSS3</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-            </li>
-            <li class="skill-item">
-              <span class="skill-name">JavaScript</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-            </li>
-          </ul>
-        </div>
-        <div class="skill-category glass reveal">
-          <div class="skill-cat-header">
-            <span class="skill-icon">⚙️</span>
-            <h3>Backend</h3>
-          </div>
-          <ul class="skill-list">
-            <li class="skill-item">
-              <span class="skill-name">Node.js</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
-            </li>
-            <li class="skill-item">
-              <span class="skill-name">Express.js</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
-            </li>
-          </ul>
-        </div>
-        <div class="skill-category glass reveal">
-          <div class="skill-cat-header">
-            <span class="skill-icon">🗄</span>
-            <h3>Database</h3>
-          </div>
-          <ul class="skill-list">
-            <li class="skill-item">
-              <span class="skill-name">MySQL</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="74"></div></div>
-            </li>
-            <li class="skill-item">
-              <span class="skill-name">MongoDB</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
-            </li>
-            <li class="skill-item">
-              <span class="skill-name">Firebase</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
-            </li>
-          </ul>
-        </div>
-        <div class="skill-category glass reveal">
-          <div class="skill-cat-header">
-            <span class="skill-icon">🛠</span>
-            <h3>Tools</h3>
-          </div>
-          <ul class="skill-list">
-            <li class="skill-item">
-              <span class="skill-name">Git</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-            </li>
-            <li class="skill-item">
-              <span class="skill-name">GitHub</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-            </li>
-            <li class="skill-item">
-              <span class="skill-name">VS Code</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="projects section" id="projects">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">03 — Projects</span>
-        <h2 class="section-title">Things I've built</h2>
-      </div>
-      <div class="projects-grid">
-
-        <article class="project-card glass reveal">
-          <div class="project-img-wrap">
-            <img src="assets/images/logo.jpg" alt="PulseLink — Healthcare Platform" class="project-img" loading="lazy" />
-            <div class="project-overlay">
-              <span class="project-number">01</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">PulseLink</h3>
-            <p class="project-desc">
-              A healthcare and blood donation platform with doctor appointment booking, blood donation management, vaccination services, and healthcare awareness features.
-            </p>
-            <div class="project-tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Node.js</span>
-              <!-- <span class="tag">MySQL</span> -->
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/arkasaharoy23/Codes" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--ghost">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-                GitHub
-              </a>
-              <a href="https://pulselink-ecd2.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary">
-                Live Demo →
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card glass reveal">
-          <div class="project-img-wrap">
-            <img src="assets/images/lovexa.png" alt="Lovexa — Proposal Website" class="project-img" loading="lazy" />
-            <div class="project-overlay">
-              <span class="project-number">02</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Lovexa</h3>
-            <p class="project-desc">
-              A creative proposal website with interactive animations, personalized user experience, and a modern romantic-themed UI design built for memorable moments.
-            </p>
-            <div class="project-tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Animations</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/arkasaharoy23/LoveXA-1.0" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--ghost">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-                GitHub
-              </a>
-              <a href="https://love-xa-1-0.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary">
-                Live Demo →
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card glass reveal">
-          <div class="project-img-wrap">
-            <img src="assets/images/page-replacement-algo.png" alt="Page-replacement-algo" class="project-img" loading="lazy" />
-            <div class="project-overlay">
-              <span class="project-number">03</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Page-replacement-algo</h3>
-            <p class="project-desc">
-              A responsive static website demonstrating modern UI design, clean semantic layouts, and core web development fundamentals without any framework dependency.
-            </p>
-            <div class="project-tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Responsive</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/arkasaharoy23/Page-replacement-algo" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--ghost">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-                GitHub
-              </a>
-              <a href="https://page-replacement-algo-elmf.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn project-btn--primary">
-                Live Demo →
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="resume-section section" id="resume">
-    <div class="container">
-      <div class="resume-cta glass reveal">
-        <div class="resume-text">
-          <span class="section-tag">04 — Resume</span>
-          <h2>Want the full picture?</h2>
-          <p>Download my resume for a complete look at my education, experience, and projects.</p>
-        </div>
-        <a href="assets/resume/Arka_Saha_Roy_Resume.pdf" download class="btn btn-primary btn-large">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <div class="hero-cta">
+        <a href="#projects" class="cta-primary">
+          Explore My Work
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="assets/resume/ARKA SAHA ROY.pdf" download class="cta-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Resume
         </a>
       </div>
+
+      <div class="hero-stats">
+        <div class="hstat">
+          <strong class="hstat-num" data-count="3">0</strong>
+          <span class="hstat-label">Projects</span>
+        </div>
+        <div class="hstat-div"></div>
+        <div class="hstat">
+          <strong class="hstat-num" data-count="2">0</strong>
+          <span class="hstat-label">Hackathons</span>
+        </div>
+        <div class="hstat-div"></div>
+        <div class="hstat">
+          <strong class="hstat-num" data-count="10">0</strong>
+          <span class="hstat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>scroll</span>
     </div>
   </section>
 
-  <section class="contact section" id="contact">
+  <section id="about" class="about section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">05 — Contact</span>
-        <h2 class="section-title">Let's connect</h2>
-      </div>
-      <p class="contact-lead reveal">
-        I'm always open to collaborations, internship opportunities, or just a good tech conversation. Reach out through any of the channels below.
-      </p>
-      <div class="contact-grid">
-        <a href="mailto:arkasaharoy23@gmail.com" class="contact-card glass reveal">
-          <div class="contact-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+      <div class="about-layout">
+        <div class="about-visual reveal">
+          <div class="about-img-wrap">
+            <img src="assets/images/profile.jpg" alt="Arka Saha Roy" class="about-photo" />
+            <div class="about-img-border"></div>
+            <div class="about-img-glow"></div>
           </div>
-          <div class="contact-info">
+          <div class="about-tag about-tag--loc">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            West Bengal, India
+          </div>
+          <div class="about-tag about-tag--status">
+            <span class="pulse-dot"></span>
+            Available for Work
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <div class="sec-eyebrow">About Me</div>
+          <h2 class="sec-title">Turning ideas into <span class="grad-text">digital reality</span></h2>
+          <p class="about-bio">
+            Hi, I'm Arka Saha Roy, a Computer Science student and aspiring Full Stack Developer passionate about building impactful digital solutions. My interests span Web Development, DevOps, Cloud Technologies, and Cybersecurity. I enjoy transforming ideas into real-world applications that solve meaningful problems.
+          </p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">🌐</div>
+              <div>
+                <strong>Web Dev</strong>
+                <small>Frontend & Backend</small>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">☁️</div>
+              <div>
+                <strong>Cloud & DevOps</strong>
+                <small>AWS & CI/CD</small>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🔐</div>
+              <div>
+                <strong>Cybersecurity</strong>
+                <small>Learning & Exploring</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-eyebrow">Professional Experience</div>
+        <h2 class="sec-title">Where I've <span class="grad-text">worked</span></h2>
+      </div>
+      <div class="exp-timeline">
+        <div class="exp-line"></div>
+        <div class="exp-card glass reveal">
+          <div class="exp-dot">
+            <div class="exp-dot-inner"></div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-org">XPMC</span>
+            <span class="exp-badge">AWS DevOps Initiative</span>
+          </div>
+          <div class="exp-body">
+            <h3 class="exp-role">DevOps Intern</h3>
+            <p class="exp-desc">Gained hands-on experience in cloud infrastructure and DevOps practices within a professional engineering environment.</p>
+            <ul class="exp-bullets">
+              <li>Worked with cloud and DevOps concepts using AWS services</li>
+              <li>Explored deployment workflows and infrastructure management</li>
+              <li>Learned CI/CD fundamentals and pipeline configuration</li>
+              <li>Collaborated within a professional development team environment</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="etag">AWS</span>
+              <span class="etag">CI/CD</span>
+              <span class="etag">DevOps</span>
+              <span class="etag">Cloud</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card glass reveal">
+          <div class="exp-dot exp-dot--orange">
+            <div class="exp-dot-inner exp-dot-inner--orange"></div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-org exp-org--orange">Coding Ninjas</span>
+            <span class="exp-badge exp-badge--orange">Content &amp; Writing</span>
+          </div>
+          <div class="exp-body">
+            <h3 class="exp-role">Social Media Content Writer</h3>
+            <p class="exp-desc">Creating engaging technical content for Coding Ninjas' social media channels, helping make programming concepts accessible and exciting for a student audience.</p>
+            <ul class="exp-bullets">
+              <li>Writing technical articles, posts, and educational content on programming topics</li>
+              <li>Crafting engaging copy tailored to a developer and student audience</li>
+              <li>Researching trending topics in tech and translating them into digestible content</li>
+              <li>Collaborating with the content team to maintain brand voice and consistency</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="etag etag--orange">Technical Writing</span>
+              <span class="etag etag--orange">Content Strategy</span>
+              <span class="etag etag--orange">Social Media</span>
+              <span class="etag etag--orange">EdTech</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-eyebrow">Technical Skills</div>
+        <h2 class="sec-title">My <span class="grad-text">tech stack</span></h2>
+      </div>
+      <div class="skills-categories">
+
+        <div class="skill-group reveal">
+          <div class="sg-header">
+            <span class="sg-icon">🖥</span>
+            <h3>Frontend</h3>
+          </div>
+          <div class="sg-badges">
+            <div class="sk-badge" data-tech="HTML5">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#e44d26" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30z"/><path fill="#f16529" d="M16 27.858l8.17-2.265 1.922-21.532H16z"/><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83.759 8.517H16zm0 8.027l-.014.004-3.442-.929-.22-2.465H9.221l.433 4.852 6.332 1.758.014-.004z"/><path fill="#fff" d="M15.986 13.407v3.091h3.806l-.358 4.009-3.448.93v3.216l6.337-1.757.046-.522.726-8.137.076-.83zm0-6.256v3.091h7.466l.062-.692.141-1.569.074-.83z"/></svg>
+              </span>
+              HTML5
+            </div>
+            <div class="sk-badge" data-tech="CSS3">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#1572b6" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30z"/><path fill="#33a9dc" d="M16 27.858l8.17-2.265 1.922-21.532H16z"/><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83.759 8.517H16zm0 8.027l-.014.004-3.442-.929-.22-2.465H9.221l.433 4.852 6.332 1.758.014-.004z"/><path fill="#fff" d="M15.986 13.407v3.091h3.806l-.358 4.009-3.448.93v3.216l6.337-1.757.046-.522.726-8.137.076-.83zm0-6.256v3.091h7.466l.062-.692.141-1.569.074-.83z"/></svg>
+              </span>
+              CSS3
+            </div>
+            <div class="sk-badge" data-tech="JavaScript">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><rect x="2" y="2" width="28" height="28" rx="2" fill="#f7df1e"/><path d="M20.809 23.875a2.866 2.866 0 002.6 1.6c1.09 0 1.787-.545 1.787-1.3 0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964 0-1.973 1.5-3.476 3.853-3.476a3.889 3.889 0 013.742 2.107l-2.048 1.315a1.793 1.793 0 00-1.694-1.13 1.149 1.149 0 00-1.264 1.13c0 .792.488 1.112 1.617 1.6l.658.282c2.237.959 3.5 1.938 3.5 4.138 0 2.371-1.861 3.667-4.361 3.667a5.061 5.061 0 01-4.774-2.691zm-9.295.228c.413.734.789 1.354 1.689 1.354.861 0 1.405-.338 1.405-1.651v-8.947h2.52v8.985c0 2.72-1.594 3.955-3.923 3.955a4.079 4.079 0 01-3.941-2.5z"/></svg>
+              </span>
+              JavaScript
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-header">
+            <span class="sg-icon">⚙️</span>
+            <h3>Backend</h3>
+          </div>
+          <div class="sg-badges">
+            <div class="sk-badge" data-tech="Node.js">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#83cd29" d="M16 3L3 10.5v15L16 33l13-7.5v-15z" opacity=".9"/><path fill="#417e38" d="M16 3v30l13-7.5v-15z" opacity=".5"/><path fill="#fff" d="M16 8.5a1.5 1.5 0 000 3 1.5 1.5 0 000-3zm-5.5 9a1.5 1.5 0 000 3 1.5 1.5 0 000-3zm11 0a1.5 1.5 0 000 3 1.5 1.5 0 000-3z" opacity=".3"/></svg>
+              </span>
+              Node.js
+            </div>
+            <div class="sk-badge" data-tech="Express.js">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="14" fill="#fff" opacity=".08"/><text x="5" y="21" font-size="11" fill="#fff" font-family="monospace" font-weight="bold">Ex</text></svg>
+              </span>
+              Express.js
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-header">
+            <span class="sg-icon">🗄</span>
+            <h3>Database</h3>
+          </div>
+          <div class="sg-badges">
+            <div class="sk-badge" data-tech="MySQL">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#4479a1" d="M29 16c0 7.18-5.82 13-13 13S3 23.18 3 16 8.82 3 16 3s13 5.82 13 13z"/><path fill="#fff" d="M10 11v10h2v-4h4v4h2V11h-2v4h-4v-4z"/></svg>
+              </span>
+              MySQL
+            </div>
+            <div class="sk-badge" data-tech="MongoDB">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#4db33d" d="M16 2C11 2 8 9 8 16s3 12 8 14c5-2 8-7 8-14S21 2 16 2z"/><path fill="#fff" d="M16 6v20" stroke="#fff" stroke-width="2"/></svg>
+              </span>
+              MongoDB
+            </div>
+            <div class="sk-badge" data-tech="Firebase">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#ffa000" d="M8 26l6-20 4 8z"/><path fill="#f57c00" d="M14 6l4 8 4-6z"/><path fill="#ffca28" d="M8 26l8-4 6 4-7-14z"/></svg>
+              </span>
+              Firebase
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-header">
+            <span class="sg-icon">☁️</span>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="sg-badges">
+            <div class="sk-badge" data-tech="AWS">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#ff9900" d="M9 19c-2 1-3 3-2 5s3 2 5 1l2-1-5-5zm14 0l-5 5 2 1c2 1 4 1 5-1s0-4-2-5z"/><path fill="#232f3e" d="M7 12c0-5 4-9 9-9s9 4 9 9c0 2-1 4-2 6l-3-3a5 5 0 10-8 0l-3 3c-1-2-2-4-2-6z"/></svg>
+              </span>
+              AWS
+            </div>
+            <div class="sk-badge" data-tech="CI/CD">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="6" fill="none" stroke="#a78bfa" stroke-width="2"/><path d="M16 3v5M16 24v5M3 16h5M24 16h5" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/></svg>
+              </span>
+              CI/CD
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-header">
+            <span class="sg-icon">🛠</span>
+            <h3>Tools</h3>
+          </div>
+          <div class="sg-badges">
+            <div class="sk-badge" data-tech="Git">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#f05032" d="M29.47 14.47L17.53 2.53a1.82 1.82 0 00-2.53 0l-2.53 2.53 3.19 3.19a2.16 2.16 0 012.72 2.72l3.07 3.07a2.16 2.16 0 11-1.3 1.3l-2.87-2.87v7.55a2.16 2.16 0 11-1.77 0V12.3A2.16 2.16 0 0114.2 10a2.19 2.19 0 01.52-2.27L11.6 4.66l-9.07 9.07a1.82 1.82 0 000 2.54L14.47 28.2a1.82 1.82 0 002.53 0L29.47 17a1.82 1.82 0 000-2.53z"/></svg>
+              </span>
+              Git
+            </div>
+            <div class="sk-badge" data-tech="GitHub">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#fff" d="M16 2C8.27 2 2 8.27 2 16c0 6.18 4.03 11.4 9.6 13.25.7.13.96-.3.96-.67v-2.36c-3.9.85-4.72-1.88-4.72-1.88-.63-1.62-1.55-2.05-1.55-2.05-1.27-.87.1-.85.1-.85 1.4.1 2.14 1.44 2.14 1.44 1.25 2.13 3.27 1.52 4.07 1.16.13-.9.49-1.52.89-1.87-3.1-.35-6.37-1.55-6.37-6.9 0-1.52.54-2.77 1.44-3.74-.14-.36-.62-1.77.14-3.69 0 0 1.17-.37 3.83 1.43a13.36 13.36 0 013.48-.47c1.18.01 2.37.16 3.48.47 2.65-1.8 3.82-1.43 3.82-1.43.76 1.92.28 3.33.14 3.69.9.97 1.43 2.22 1.43 3.74 0 5.36-3.27 6.54-6.39 6.89.5.43.94 1.29.94 2.6v3.85c0 .37.25.81.97.67C25.97 27.4 30 22.18 30 16c0-7.73-6.27-14-14-14z"/></svg>
+              </span>
+              GitHub
+            </div>
+            <div class="sk-badge" data-tech="VS Code">
+              <span class="sk-ico">
+                <svg viewBox="0 0 32 32" width="22" height="22"><path fill="#007acc" d="M23 2l-9 9-4-4-7 7 7 7 4-4 9 9 6-3V5z" opacity=".9"/><path fill="#fff" d="M3 14l7-7 4 4-7 7z" opacity=".5"/></svg>
+              </span>
+              VS Code
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-eyebrow">Projects</div>
+        <h2 class="sec-title">Things I've <span class="grad-text">built</span></h2>
+      </div>
+
+      <div class="project-featured glass reveal">
+        <div class="pf-img-wrap">
+          <img src="assets/images/logo.jpg" alt="PulseLink" class="pf-img" loading="lazy" />
+          <div class="pf-img-overlay"></div>
+          <div class="pf-label">
+            <span class="featured-star">★</span> Featured Project
+          </div>
+        </div>
+        <div class="pf-body">
+          <div class="pf-number">01</div>
+          <h3 class="pf-title">PulseLink</h3>
+          <p class="pf-desc">
+            A full-stack healthcare and blood donation platform built for real-world impact. Features doctor appointment booking, intelligent blood donation management, vaccination services, and a community-driven healthcare awareness system.
+          </p>
+          <div class="pf-highlights">
+            <div class="pf-highlight">🏥 Doctor Appointments</div>
+            <div class="pf-highlight">🩸 Blood Donation</div>
+            <div class="pf-highlight">💉 Vaccination Services</div>
+            <div class="pf-highlight">📢 Health Awareness</div>
+          </div>
+          <div class="pf-tags">
+            <span class="ptag">HTML5</span>
+            <span class="ptag">CSS3</span>
+            <span class="ptag">JavaScript</span>
+            <span class="ptag">Node.js</span>
+            <span class="ptag">MySQL</span>
+          </div>
+          <div class="pf-links">
+            <a href="https://github.com/arkasaharoy23/Codes" target="_blank" rel="noopener" class="plink plink--ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="https://pulselink-ecd2.onrender.com" target="_blank" rel="noopener" class="plink plink--primary">
+              Live Demo →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="proj-card glass reveal">
+          <div class="pc-img-wrap">
+            <img src="assets/images/lovexa.png" alt="Lovexa" class="pc-img" loading="lazy" />
+            <div class="pc-num">02</div>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-title">Lovexa</h3>
+            <p class="pc-desc">A creative, interactive proposal website with rich animations and a personalized romantic-themed user experience that creates lasting digital memories.</p>
+            <div class="pc-tags">
+              <span class="ptag">HTML5</span>
+              <span class="ptag">CSS3</span>
+              <span class="ptag">JavaScript</span>
+              <span class="ptag">Animations</span>
+            </div>
+            <div class="pc-links">
+              <a href="https://github.com/arkasaharoy23/LoveXA-1.0" target="_blank" rel="noopener" class="plink plink--ghost sm">GitHub</a>
+              <a href="https://love-xa-1-0.vercel.app/" target="_blank" rel="noopener" class="plink plink--primary sm">Live →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card glass reveal">
+          <div class="pc-img-wrap">
+            <img src="assets/images/personal-site.png" alt="Personal Static Website" class="pc-img" loading="lazy" />
+            <div class="pc-num">03</div>
+          </div>
+          <div class="pc-body">
+            <h3 class="pc-title">Personal Static Website</h3>
+            <p class="pc-desc">A fully responsive showcase website demonstrating modern UI design principles, clean semantic layouts, and core frontend development fundamentals.</p>
+            <div class="pc-tags">
+              <span class="ptag">HTML5</span>
+              <span class="ptag">CSS3</span>
+              <span class="ptag">JavaScript</span>
+              <span class="ptag">Responsive</span>
+            </div>
+            <div class="pc-links">
+              <a href="https://github.com/arkasaharoy23/Page-replacement-algo" target="_blank" rel="noopener" class="plink plink--ghost sm">GitHub</a>
+              <a href="https://page-replacement-algo-elmf.onrender.com" target="_blank" rel="noopener" class="plink plink--primary sm">Live →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="hackathons" class="hackathons section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-eyebrow">Hackathons & Competitions</div>
+        <h2 class="sec-title">Built under <span class="grad-text">pressure</span></h2>
+      </div>
+      <div class="hack-timeline">
+        <div class="hack-connector"></div>
+
+        <div class="hack-card glass reveal">
+          <div class="hack-node">
+            <div class="hack-node-ring"></div>
+            <span>🏆</span>
+          </div>
+          <div class="hack-body">
+            <div class="hack-meta">
+              <span class="hack-event">GDG Solution Challenge</span>
+              <span class="hack-badge hack-badge--gdg">Google Developer Groups</span>
+            </div>
+            <h3 class="hack-project">PulseLink</h3>
+            <p class="hack-desc">
+              Developed PulseLink, a healthcare and blood donation platform focused on improving healthcare accessibility, blood donation management, and community engagement. Built to address real gaps in the healthcare ecosystem.
+            </p>
+            <div class="hack-tags">
+              <span class="etag">Healthcare Tech</span>
+              <span class="etag">Full Stack</span>
+              <span class="etag">Community Impact</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hack-card glass reveal">
+          <div class="hack-node">
+            <div class="hack-node-ring"></div>
+            <span>⚡</span>
+          </div>
+          <div class="hack-body">
+            <div class="hack-meta">
+              <span class="hack-event">Smart India Hackathon (SIH)</span>
+              <span class="hack-badge hack-badge--sih">National Level</span>
+            </div>
+            <h3 class="hack-project">RakshaPath</h3>
+            <p class="hack-desc">
+              Developed RakshaPath, a solution-oriented project designed to address real-world challenges through technology and innovation. Competed at the national level against thousands of student teams.
+            </p>
+            <div class="hack-tags">
+              <span class="etag">Innovation</span>
+              <span class="etag">Problem Solving</span>
+              <span class="etag">National Level</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="certs section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-eyebrow">Certifications</div>
+        <h2 class="sec-title">Credentials & <span class="grad-text">learning</span></h2>
+      </div>
+      <div class="certs-grid">
+
+        <div class="cert-card glass reveal">
+          <div class="cert-icon">☁️</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Amazon Web Services</span>
+            <h3 class="cert-title">AWS DevOps Initiative</h3>
+            <span class="cert-date">2024</span>
+          </div>
+          <div class="cert-shine"></div>
+        </div>
+
+        <div class="cert-card glass reveal cert-card--add">
+          <div class="cert-add-icon">+</div>
+          <p>More certifications coming soon</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-eyebrow">Contact</div>
+        <h2 class="sec-title">Let's <span class="grad-text">connect</span></h2>
+      </div>
+      <p class="contact-intro reveal">Open to internships, collaborations, and interesting conversations. Pick your preferred channel.</p>
+
+      <div class="contact-grid">
+
+        <a href="mailto:arkasaharoy23@gmail.com" class="contact-card glass reveal">
+          <div class="cc-icon cc-icon--email">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          </div>
+          <div class="cc-body">
             <strong>Email</strong>
             <span>arkasaharoy23@gmail.com</span>
           </div>
-          <span class="contact-arrow">→</span>
+          <span class="cc-arrow">↗</span>
         </a>
-        <a href="https://github.com/arkasaharoy23" target="_blank" rel="noopener noreferrer" class="contact-card glass reveal">
-          <div class="contact-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+
+        <a href="https://github.com/arkasaharoy23" target="_blank" rel="noopener" class="contact-card glass reveal">
+          <div class="cc-icon cc-icon--gh">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
           </div>
-          <div class="contact-info">
+          <div class="cc-body">
             <strong>GitHub</strong>
             <span>Arka Saha Roy</span>
           </div>
-          <span class="contact-arrow">→</span>
+          <span class="cc-arrow">↗</span>
         </a>
-        <a href="https://www.linkedin.com/in/arka-saha-roy-b07a21324" target="_blank" rel="noopener noreferrer" class="contact-card glass reveal">
-          <div class="contact-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+
+        <a href="https://www.linkedin.com/in/arka-saha-roy-b07a21324" target="_blank" rel="noopener" class="contact-card glass reveal">
+          <div class="cc-icon cc-icon--li">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </div>
-          <div class="contact-info">
+          <div class="cc-body">
             <strong>LinkedIn</strong>
             <span>Arka Saha Roy</span>
           </div>
-          <span class="contact-arrow">→</span>
+          <span class="cc-arrow">↗</span>
         </a>
-        <a href="https://www.instagram.com/saharoy_arka" target="_blank" rel="noopener noreferrer" class="contact-card glass reveal">
-          <div class="contact-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+
+        <a href="https://x.com/arkasaharoy_23" target="_blank" rel="noopener" class="contact-card glass reveal">
+          <div class="cc-icon cc-icon--tw">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </div>
-          <div class="contact-info">
+          <div class="cc-body">
+            <strong>Twitter / X</strong>
+            <span>@arkasaharoy_23</span>
+          </div>
+          <span class="cc-arrow">↗</span>
+        </a>
+
+        <a href="https://www.instagram.com/saharoy_arka" target="_blank" rel="noopener" class="contact-card glass reveal">
+          <div class="cc-icon cc-icon--ig">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </div>
+          <div class="cc-body">
             <strong>Instagram</strong>
-            <span>Arka Saha Roy</span>
+            <span>saharoy_arka</span>
           </div>
-          <span class="contact-arrow">→</span>
+          <span class="cc-arrow">↗</span>
         </a>
+
+        <a href="https://wa.me/91388091900?text=Hi%20Arka!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect." target="_blank" rel="noopener" class="contact-card glass reveal contact-card--wa">
+          <div class="cc-icon cc-icon--wa">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="cc-body">
+            <strong>WhatsApp</strong>
+            <span>Message me directly</span>
+          </div>
+          <span class="cc-arrow">↗</span>
+        </a>
+
       </div>
     </div>
   </section>
@@ -386,27 +622,27 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <a href="#home" class="nav-logo">
-          <span class="logo-bracket">&lt;</span>arka<span class="logo-accent">/</span><span class="logo-bracket">&gt;</span>
+        <a href="#home" class="nav-brand footer-brand">
+          <span class="brand-a">A</span><span class="brand-rest">rka.</span>
         </a>
-        <p class="footer-copy">© 2025 Arka Saha Roy. Built with HTML, CSS & JS.</p>
+        <p class="footer-copy">© 2025 Arka Saha Roy — Built with HTML, CSS & JS</p>
         <div class="footer-socials">
-          <a href="https://github.com/arkasaharoy23" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+          <a href="https://github.com/arkasaharoy23" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
           </a>
-          <a href="https://www.linkedin.com/in/arka-saha-roy-b07a21324" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://www.linkedin.com/in/arka-saha-roy-b07a21324" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
-          <a href="https://www.instagram.com/saharoy_arka" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <a href="https://x.com/arkasaharoy_23" target="_blank" rel="noopener" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
   <script src="js/script.js"></script>
