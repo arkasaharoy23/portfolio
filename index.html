@@ -21,6 +21,7 @@
 
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-text" id="cursorText"></div>
 
   <nav id="navbar" class="navbar">
     <div class="nav-wrap">
@@ -237,104 +238,140 @@
       <div class="sec-header reveal">
         <div class="sec-eyebrow">Technical Skills</div>
         <h2 class="sec-title">My <span class="grad-text">tech stack</span></h2>
+        <p class="skills-sub reveal">Technologies I work with daily to build full-stack applications</p>
       </div>
-      <div class="skills-categories">
 
-        <div class="skill-group reveal">
-          <div class="sg-header">
-            <span class="sg-icon">🖥</span>
-            <h3>Frontend</h3>
+      <div class="skills-bento reveal">
+
+        <div class="sk-bento-card sk-bento--wide glass">
+          <div class="sk-bento-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            Frontend
           </div>
-          <div class="sg-badges">
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#e44d26" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30z"/><path fill="#f16529" d="M16 27.858l8.17-2.265 1.922-21.532H16z"/><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83.759 8.517H16zm0 8.027l-.014.004-3.442-.929-.22-2.465H9.221l.433 4.852 6.332 1.758.014-.004z"/><path fill="#fff" d="M15.986 13.407v3.091h3.806l-.358 4.009-3.448.93v3.216l6.337-1.757.046-.522.726-8.137.076-.83zm0-6.256v3.091h7.466l.062-.692.141-1.569.074-.83z"/></svg></span>
-              HTML5
+          <div class="sk-bento-items">
+            <div class="sk-item">
+              <div class="sk-item-icon" style="background:rgba(228,77,38,0.12);border-color:rgba(228,77,38,0.25)">
+                <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#e44d26" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30z"/><path fill="#f16529" d="M16 27.858l8.17-2.265 1.922-21.532H16z"/><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83.759 8.517H16zm0 8.027l-.014.004-3.442-.929-.22-2.465H9.221l.433 4.852 6.332 1.758.014-.004z"/><path fill="#fff" d="M15.986 13.407v3.091h3.806l-.358 4.009-3.448.93v3.216l6.337-1.757.046-.522.726-8.137.076-.83zm0-6.256v3.091h7.466l.062-.692.141-1.569.074-.83z"/></svg>
+              </div>
+              <span class="sk-item-name">HTML5</span>
             </div>
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#1572b6" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30z"/><path fill="#33a9dc" d="M16 27.858l8.17-2.265 1.922-21.532H16z"/><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83.759 8.517H16zm0 8.027l-.014.004-3.442-.929-.22-2.465H9.221l.433 4.852 6.332 1.758.014-.004z"/><path fill="#fff" d="M15.986 13.407v3.091h3.806l-.358 4.009-3.448.93v3.216l6.337-1.757.046-.522.726-8.137.076-.83zm0-6.256v3.091h7.466l.062-.692.141-1.569.074-.83z"/></svg></span>
-              CSS3
+            <div class="sk-item">
+              <div class="sk-item-icon" style="background:rgba(21,114,182,0.12);border-color:rgba(21,114,182,0.25)">
+                <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#1572b6" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30z"/><path fill="#33a9dc" d="M16 27.858l8.17-2.265 1.922-21.532H16z"/><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83.759 8.517H16zm0 8.027l-.014.004-3.442-.929-.22-2.465H9.221l.433 4.852 6.332 1.758.014-.004z"/><path fill="#fff" d="M15.986 13.407v3.091h3.806l-.358 4.009-3.448.93v3.216l6.337-1.757.046-.522.726-8.137.076-.83zm0-6.256v3.091h7.466l.062-.692.141-1.569.074-.83z"/></svg>
+              </div>
+              <span class="sk-item-name">CSS3</span>
             </div>
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><rect x="2" y="2" width="28" height="28" rx="2" fill="#f7df1e"/><path d="M20.809 23.875a2.866 2.866 0 002.6 1.6c1.09 0 1.787-.545 1.787-1.3 0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964 0-1.973 1.5-3.476 3.853-3.476a3.889 3.889 0 013.742 2.107l-2.048 1.315a1.793 1.793 0 00-1.694-1.13 1.149 1.149 0 00-1.264 1.13c0 .792.488 1.112 1.617 1.6l.658.282c2.237.959 3.5 1.938 3.5 4.138 0 2.371-1.861 3.667-4.361 3.667a5.061 5.061 0 01-4.774-2.691zm-9.295.228c.413.734.789 1.354 1.689 1.354.861 0 1.405-.338 1.405-1.651v-8.947h2.52v8.985c0 2.72-1.594 3.955-3.923 3.955a4.079 4.079 0 01-3.941-2.5z"/></svg></span>
-              JavaScript
+            <div class="sk-item">
+              <div class="sk-item-icon" style="background:rgba(247,223,30,0.1);border-color:rgba(247,223,30,0.2)">
+                <svg viewBox="0 0 32 32" width="28" height="28"><rect x="2" y="2" width="28" height="28" rx="2" fill="#f7df1e"/><path d="M20.809 23.875a2.866 2.866 0 002.6 1.6c1.09 0 1.787-.545 1.787-1.3 0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964 0-1.973 1.5-3.476 3.853-3.476a3.889 3.889 0 013.742 2.107l-2.048 1.315a1.793 1.793 0 00-1.694-1.13 1.149 1.149 0 00-1.264 1.13c0 .792.488 1.112 1.617 1.6l.658.282c2.237.959 3.5 1.938 3.5 4.138 0 2.371-1.861 3.667-4.361 3.667a5.061 5.061 0 01-4.774-2.691zm-9.295.228c.413.734.789 1.354 1.689 1.354.861 0 1.405-.338 1.405-1.651v-8.947h2.52v8.985c0 2.72-1.594 3.955-3.923 3.955a4.079 4.079 0 01-3.941-2.5z"/></svg>
+              </div>
+              <span class="sk-item-name">JavaScript</span>
             </div>
           </div>
+          <div class="sk-bento-glow" style="background:radial-gradient(circle at 80% 50%, rgba(228,77,38,0.08), transparent 70%)"></div>
         </div>
 
-        <div class="skill-group reveal">
-          <div class="sg-header">
-            <span class="sg-icon">⚙️</span>
-            <h3>Backend</h3>
+        <div class="sk-bento-card glass">
+          <div class="sk-bento-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Backend
           </div>
-          <div class="sg-badges">
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#83cd29" d="M16 3L3 10.5v15L16 33l13-7.5v-15z" opacity=".9"/><path fill="#417e38" d="M16 3v30l13-7.5v-15z" opacity=".5"/></svg></span>
-              Node.js
+          <div class="sk-bento-items">
+            <div class="sk-item">
+              <div class="sk-item-icon" style="background:rgba(131,205,41,0.1);border-color:rgba(131,205,41,0.2)">
+                <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#83cd29" d="M16 3L3 10.5v15L16 33l13-7.5v-15z" opacity=".9"/><path fill="#417e38" d="M16 3v30l13-7.5v-15z" opacity=".5"/></svg>
+              </div>
+              <span class="sk-item-name">Node.js</span>
             </div>
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="14" fill="#fff" opacity=".08"/><text x="5" y="21" font-size="11" fill="#fff" font-family="monospace" font-weight="bold">Ex</text></svg></span>
-              Express.js
+            <div class="sk-item">
+              <div class="sk-item-icon" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1)">
+                <svg viewBox="0 0 32 32" width="28" height="28"><circle cx="16" cy="16" r="13" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/><text x="7" y="21" font-size="12" fill="#c0c0c0" font-family="monospace" font-weight="bold">Ex</text></svg>
+              </div>
+              <span class="sk-item-name">Express.js</span>
             </div>
           </div>
+          <div class="sk-bento-glow" style="background:radial-gradient(circle at 50% 80%, rgba(131,205,41,0.07), transparent 70%)"></div>
         </div>
 
-        <div class="skill-group reveal">
-          <div class="sg-header">
-            <span class="sg-icon">🗄</span>
-            <h3>Database</h3>
+        <div class="sk-bento-card glass">
+          <div class="sk-bento-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            Database
           </div>
-          <div class="sg-badges">
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#4479a1" d="M29 16c0 7.18-5.82 13-13 13S3 23.18 3 16 8.82 3 16 3s13 5.82 13 13z"/><path fill="#fff" d="M10 11v10h2v-4h4v4h2V11h-2v4h-4v-4z"/></svg></span>
-              MySQL
+          <div class="sk-bento-items sk-bento-items--col">
+            <div class="sk-item sk-item--row">
+              <div class="sk-item-icon sk-item-icon--sm" style="background:rgba(68,121,161,0.12);border-color:rgba(68,121,161,0.25)">
+                <svg viewBox="0 0 32 32" width="20" height="20"><path fill="#4479a1" d="M29 16c0 7.18-5.82 13-13 13S3 23.18 3 16 8.82 3 16 3s13 5.82 13 13z"/><path fill="#fff" d="M10 11v10h2v-4h4v4h2V11h-2v4h-4v-4z"/></svg>
+              </div>
+              <span class="sk-item-name">MySQL</span>
             </div>
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#4db33d" d="M16 2C11 2 8 9 8 16s3 12 8 14c5-2 8-7 8-14S21 2 16 2z"/><path fill="#fff" d="M16 6v20" stroke="#fff" stroke-width="2"/></svg></span>
-              MongoDB
+            <div class="sk-item sk-item--row">
+              <div class="sk-item-icon sk-item-icon--sm" style="background:rgba(77,179,61,0.1);border-color:rgba(77,179,61,0.2)">
+                <svg viewBox="0 0 32 32" width="20" height="20"><path fill="#4db33d" d="M16 2C11 2 8 9 8 16s3 12 8 14c5-2 8-7 8-14S21 2 16 2z"/></svg>
+              </div>
+              <span class="sk-item-name">MongoDB</span>
             </div>
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#ffa000" d="M8 26l6-20 4 8z"/><path fill="#f57c00" d="M14 6l4 8 4-6z"/><path fill="#ffca28" d="M8 26l8-4 6 4-7-14z"/></svg></span>
-              Firebase
+            <div class="sk-item sk-item--row">
+              <div class="sk-item-icon sk-item-icon--sm" style="background:rgba(255,160,0,0.1);border-color:rgba(255,160,0,0.2)">
+                <svg viewBox="0 0 32 32" width="20" height="20"><path fill="#ffa000" d="M8 26l6-20 4 8z"/><path fill="#f57c00" d="M14 6l4 8 4-6z"/><path fill="#ffca28" d="M8 26l8-4 6 4-7-14z"/></svg>
+              </div>
+              <span class="sk-item-name">Firebase</span>
             </div>
           </div>
+          <div class="sk-bento-glow" style="background:radial-gradient(circle at 20% 80%, rgba(68,121,161,0.08), transparent 70%)"></div>
         </div>
 
-        <div class="skill-group reveal">
-          <div class="sg-header">
-            <span class="sg-icon">☁️</span>
-            <h3>Cloud &amp; DevOps</h3>
+        <div class="sk-bento-card glass">
+          <div class="sk-bento-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Tools
           </div>
-          <div class="sg-badges">
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#ff9900" d="M9 19c-2 1-3 3-2 5s3 2 5 1l2-1-5-5zm14 0l-5 5 2 1c2 1 4 1 5-1s0-4-2-5z"/><path fill="#232f3e" d="M7 12c0-5 4-9 9-9s9 4 9 9c0 2-1 4-2 6l-3-3a5 5 0 10-8 0l-3 3c-1-2-2-4-2-6z"/></svg></span>
-              AWS
+          <div class="sk-bento-items sk-bento-items--col">
+            <div class="sk-item sk-item--row">
+              <div class="sk-item-icon sk-item-icon--sm" style="background:rgba(240,80,50,0.1);border-color:rgba(240,80,50,0.2)">
+                <svg viewBox="0 0 32 32" width="20" height="20"><path fill="#f05032" d="M29.47 14.47L17.53 2.53a1.82 1.82 0 00-2.53 0l-2.53 2.53 3.19 3.19a2.16 2.16 0 012.72 2.72l3.07 3.07a2.16 2.16 0 11-1.3 1.3l-2.87-2.87v7.55a2.16 2.16 0 11-1.77 0V12.3A2.16 2.16 0 0114.2 10a2.19 2.19 0 01.52-2.27L11.6 4.66l-9.07 9.07a1.82 1.82 0 000 2.54L14.47 28.2a1.82 1.82 0 002.53 0L29.47 17a1.82 1.82 0 000-2.53z"/></svg>
+              </div>
+              <span class="sk-item-name">Git</span>
             </div>
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="6" fill="none" stroke="#a78bfa" stroke-width="2"/><path d="M16 3v5M16 24v5M3 16h5M24 16h5" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/></svg></span>
-              CI/CD
+            <div class="sk-item sk-item--row">
+              <div class="sk-item-icon sk-item-icon--sm" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12)">
+                <svg viewBox="0 0 32 32" width="20" height="20"><path fill="#fff" d="M16 2C8.27 2 2 8.27 2 16c0 6.18 4.03 11.4 9.6 13.25.7.13.96-.3.96-.67v-2.36c-3.9.85-4.72-1.88-4.72-1.88-.63-1.62-1.55-2.05-1.55-2.05-1.27-.87.1-.85.1-.85 1.4.1 2.14 1.44 2.14 1.44 1.25 2.13 3.27 1.52 4.07 1.16.13-.9.49-1.52.89-1.87-3.1-.35-6.37-1.55-6.37-6.9 0-1.52.54-2.77 1.44-3.74-.14-.36-.62-1.77.14-3.69 0 0 1.17-.37 3.83 1.43a13.36 13.36 0 013.48-.47c1.18.01 2.37.16 3.48.47 2.65-1.8 3.82-1.43 3.82-1.43.76 1.92.28 3.33.14 3.69.9.97 1.43 2.22 1.43 3.74 0 5.36-3.27 6.54-6.39 6.89.5.43.94 1.29.94 2.6v3.85c0 .37.25.81.97.67C25.97 27.4 30 22.18 30 16c0-7.73-6.27-14-14-14z"/></svg>
+              </div>
+              <span class="sk-item-name">GitHub</span>
+            </div>
+            <div class="sk-item sk-item--row">
+              <div class="sk-item-icon sk-item-icon--sm" style="background:rgba(0,122,204,0.12);border-color:rgba(0,122,204,0.25)">
+                <svg viewBox="0 0 32 32" width="20" height="20"><path fill="#007acc" d="M23 2l-9 9-4-4-7 7 7 7 4-4 9 9 6-3V5z" opacity=".9"/><path fill="#fff" d="M3 14l7-7 4 4-7 7z" opacity=".5"/></svg>
+              </div>
+              <span class="sk-item-name">VS Code</span>
             </div>
           </div>
+          <div class="sk-bento-glow" style="background:radial-gradient(circle at 80% 20%, rgba(240,80,50,0.07), transparent 70%)"></div>
         </div>
 
-        <div class="skill-group reveal">
-          <div class="sg-header">
-            <span class="sg-icon">🛠</span>
-            <h3>Tools</h3>
+        <div class="sk-bento-card sk-bento--wide glass">
+          <div class="sk-bento-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            Cloud &amp; DevOps
           </div>
-          <div class="sg-badges">
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#f05032" d="M29.47 14.47L17.53 2.53a1.82 1.82 0 00-2.53 0l-2.53 2.53 3.19 3.19a2.16 2.16 0 012.72 2.72l3.07 3.07a2.16 2.16 0 11-1.3 1.3l-2.87-2.87v7.55a2.16 2.16 0 11-1.77 0V12.3A2.16 2.16 0 0114.2 10a2.19 2.19 0 01.52-2.27L11.6 4.66l-9.07 9.07a1.82 1.82 0 000 2.54L14.47 28.2a1.82 1.82 0 002.53 0L29.47 17a1.82 1.82 0 000-2.53z"/></svg></span>
-              Git
+          <div class="sk-bento-items">
+            <div class="sk-item">
+              <div class="sk-item-icon" style="background:rgba(255,153,0,0.1);border-color:rgba(255,153,0,0.2)">
+                <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#ff9900" d="M9 19c-2 1-3 3-2 5s3 2 5 1l2-1-5-5zm14 0l-5 5 2 1c2 1 4 1 5-1s0-4-2-5z"/><path fill="#232f3e" d="M7 12c0-5 4-9 9-9s9 4 9 9c0 2-1 4-2 6l-3-3a5 5 0 10-8 0l-3 3c-1-2-2-4-2-6z"/></svg>
+              </div>
+              <span class="sk-item-name">AWS</span>
             </div>
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#fff" d="M16 2C8.27 2 2 8.27 2 16c0 6.18 4.03 11.4 9.6 13.25.7.13.96-.3.96-.67v-2.36c-3.9.85-4.72-1.88-4.72-1.88-.63-1.62-1.55-2.05-1.55-2.05-1.27-.87.1-.85.1-.85 1.4.1 2.14 1.44 2.14 1.44 1.25 2.13 3.27 1.52 4.07 1.16.13-.9.49-1.52.89-1.87-3.1-.35-6.37-1.55-6.37-6.9 0-1.52.54-2.77 1.44-3.74-.14-.36-.62-1.77.14-3.69 0 0 1.17-.37 3.83 1.43a13.36 13.36 0 013.48-.47c1.18.01 2.37.16 3.48.47 2.65-1.8 3.82-1.43 3.82-1.43.76 1.92.28 3.33.14 3.69.9.97 1.43 2.22 1.43 3.74 0 5.36-3.27 6.54-6.39 6.89.5.43.94 1.29.94 2.6v3.85c0 .37.25.81.97.67C25.97 27.4 30 22.18 30 16c0-7.73-6.27-14-14-14z"/></svg></span>
-              GitHub
+            <div class="sk-item">
+              <div class="sk-item-icon" style="background:rgba(155,93,229,0.1);border-color:rgba(155,93,229,0.2)">
+                <svg viewBox="0 0 32 32" width="28" height="28"><circle cx="16" cy="16" r="6" fill="none" stroke="#a78bfa" stroke-width="2"/><path d="M16 3v5M16 24v5M3 16h5M24 16h5" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="sk-item-name">CI/CD</span>
             </div>
-            <div class="sk-badge">
-              <span class="sk-ico"><svg viewBox="0 0 32 32" width="22" height="22"><path fill="#007acc" d="M23 2l-9 9-4-4-7 7 7 7 4-4 9 9 6-3V5z" opacity=".9"/><path fill="#fff" d="M3 14l7-7 4 4-7 7z" opacity=".5"/></svg></span>
-              VS Code
+            <div class="sk-bento-cloud-text">
+              <p>Experienced with AWS services, deployment workflows &amp; DevOps pipelines via the XPMC internship.</p>
             </div>
           </div>
+          <div class="sk-bento-glow" style="background:radial-gradient(circle at 30% 50%, rgba(255,153,0,0.07), transparent 60%)"></div>
         </div>
 
       </div>
@@ -480,27 +517,271 @@
     </div>
   </section>
 
+  <div id="certModal" class="cert-modal" role="dialog" aria-modal="true" aria-label="Certificate Preview">
+    <div class="cert-modal-backdrop" id="certModalBackdrop"></div>
+    <div class="cert-modal-box">
+      <button class="cert-modal-close" id="certModalClose" aria-label="Close preview">✕</button>
+      <div class="cert-modal-inner">
+        <div class="cert-modal-header">
+          <span class="cert-modal-issuer" id="modalIssuer"></span>
+          <h3 class="cert-modal-title" id="modalTitle"></h3>
+          <span class="cert-modal-date" id="modalDate"></span>
+        </div>
+        <div class="cert-modal-preview">
+          <iframe id="modalFrame" title="Certificate Preview" frameborder="0"></iframe>
+          <div class="cert-modal-nodl">🔒 Preview only — downloading is disabled</div>
+        </div>
+        <a id="modalVerify" href="#" target="_blank" rel="noopener" class="cert-modal-verify">Verify on Coursera ↗</a>
+      </div>
+    </div>
+  </div>
+
   <section id="certifications" class="certs section">
     <div class="container">
       <div class="sec-header reveal">
         <div class="sec-eyebrow">Certifications</div>
         <h2 class="sec-title">Credentials &amp; <span class="grad-text">learning</span></h2>
+        <p class="certs-count reveal"><span class="grad-text">21</span> certificates across AI, DevOps, Algorithms, Design Thinking &amp; more</p>
       </div>
-      <div class="certs-grid">
-        <div class="cert-card glass reveal">
-          <div class="cert-icon">☁️</div>
+
+      <div class="certs-group-label reveal">⭐ Specializations</div>
+      <div class="certs-grid reveal">
+        <div class="cert-card glass cert-card--special" data-pdf="assets/certs/Coursera JK2GCQFBWIFR.pdf" data-issuer="University of Virginia · Darden School of Business" data-title="Design Thinking Specialization" data-date="Jun 2025" data-verify="https://coursera.org/verify/specialization/JK2GCQFBWIFR">
+          <div class="cert-icon">🎨</div>
           <div class="cert-body">
-            <span class="cert-issuer">Amazon Web Services</span>
-            <h3 class="cert-title">AWS DevOps Initiative</h3>
-            <span class="cert-date">2024</span>
+            <span class="cert-issuer">University of Virginia</span>
+            <h3 class="cert-title">Design Thinking</h3>
+            <span class="cert-date">Jun 2025 · 4 Courses</span>
           </div>
+          <button class="cert-preview-btn">Preview</button>
           <div class="cert-shine"></div>
         </div>
-        <div class="cert-card glass reveal cert-card--add">
-          <div class="cert-add-icon">+</div>
-          <p>More certifications coming soon</p>
+        <div class="cert-card glass cert-card--special" data-pdf="assets/certs/Coursera U4YH9SXUCOUI.pdf" data-issuer="University of Colorado Boulder" data-title="Foundations of Data Structures & Algorithms" data-date="Jun 2025" data-verify="https://coursera.org/verify/specialization/U4YH9SXUCOUI">
+          <div class="cert-icon">🧠</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Univ. of Colorado Boulder</span>
+            <h3 class="cert-title">Foundations of Data Structures &amp; Algorithms</h3>
+            <span class="cert-date">Jun 2025 · 5 Courses</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
         </div>
       </div>
+
+      <div class="certs-group-label reveal">☁️ Cloud &amp; DevOps</div>
+      <div class="certs-grid reveal">
+        <div class="cert-card glass" data-pdf="assets/certs/Arka_Saha_Roy_Flux_B_Snu-Aws-Devops-02_Completion_Certificate - Copy.pdf" data-issuer="Employability.life · Federation University" data-title="XPro Project: DevOps — AWS DevOps Initiative" data-date="Jan 2026" data-verify="">
+          <div class="cert-icon">☁️</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Employability.life · Federation Univ.</span>
+            <h3 class="cert-title">AWS DevOps Initiative</h3>
+            <span class="cert-date">Jan 2026</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera JCGRLR36G91M.pdf" data-issuer="IBM" data-title="Introduction to DevOps" data-date="Nov 2025" data-verify="https://coursera.org/verify/JCGRLR36G91M">
+          <div class="cert-icon">⚙️</div>
+          <div class="cert-body">
+            <span class="cert-issuer">IBM</span>
+            <h3 class="cert-title">Introduction to DevOps</h3>
+            <span class="cert-date">Nov 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+      </div>
+
+      <div class="certs-group-label reveal">🤖 AI &amp; Machine Learning</div>
+      <div class="certs-grid reveal">
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera 0RIJX9LYYMWK.pdf" data-issuer="Google Cloud" data-title="Introduction to Generative AI" data-date="Mar 2025" data-verify="https://coursera.org/verify/0RIJX9LYYMWK">
+          <div class="cert-icon">🔮</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Google Cloud</span>
+            <h3 class="cert-title">Introduction to Generative AI</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera GW85G5T7BTAD.pdf" data-issuer="IBM" data-title="Introduction to Artificial Intelligence (AI)" data-date="Mar 2025" data-verify="https://coursera.org/verify/GW85G5T7BTAD">
+          <div class="cert-icon">🧬</div>
+          <div class="cert-body">
+            <span class="cert-issuer">IBM</span>
+            <h3 class="cert-title">Introduction to Artificial Intelligence (AI)</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera N2DHCLB7DDWX.pdf" data-issuer="IBM" data-title="Generative AI: Introduction and Applications" data-date="Mar 2025" data-verify="https://coursera.org/verify/N2DHCLB7DDWX">
+          <div class="cert-icon">✨</div>
+          <div class="cert-body">
+            <span class="cert-issuer">IBM</span>
+            <h3 class="cert-title">Generative AI: Introduction &amp; Applications</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera WWPSCTCZN4VM.pdf" data-issuer="Edureka" data-title="Machine Learning and NLP Basics" data-date="Mar 2025" data-verify="https://coursera.org/verify/WWPSCTCZN4VM">
+          <div class="cert-icon">📊</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Edureka</span>
+            <h3 class="cert-title">Machine Learning &amp; NLP Basics</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+      </div>
+
+      <div class="certs-group-label reveal">🔢 Algorithms &amp; Data Structures</div>
+      <div class="certs-grid reveal">
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera XL5R76A1ZMRR.pdf" data-issuer="University of Colorado Boulder" data-title="Algorithms for Searching, Sorting & Indexing" data-date="Mar 2025" data-verify="https://coursera.org/verify/XL5R76A1ZMRR">
+          <div class="cert-icon">🔍</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Univ. of Colorado Boulder</span>
+            <h3 class="cert-title">Algorithms: Searching, Sorting &amp; Indexing</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera BCT8ONP6JTCK.pdf" data-issuer="University of Colorado Boulder" data-title="Trees and Graphs: Basics" data-date="Jun 2025" data-verify="https://coursera.org/verify/BCT8ONP6JTCK">
+          <div class="cert-icon">🌳</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Univ. of Colorado Boulder</span>
+            <h3 class="cert-title">Trees and Graphs: Basics</h3>
+            <span class="cert-date">Jun 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera LHMDFXZPXU3J.pdf" data-issuer="University of Colorado Boulder" data-title="Dynamic Programming, Greedy Algorithms" data-date="Jun 2025" data-verify="https://coursera.org/verify/LHMDFXZPXU3J">
+          <div class="cert-icon">⚡</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Univ. of Colorado Boulder</span>
+            <h3 class="cert-title">Dynamic Programming, Greedy Algorithms</h3>
+            <span class="cert-date">Jun 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera ZOTWT4S8X0FE.pdf" data-issuer="University of Colorado Boulder" data-title="Approximation Algorithms and Linear Programming" data-date="Jun 2025" data-verify="https://coursera.org/verify/ZOTWT4S8X0FE">
+          <div class="cert-icon">📐</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Univ. of Colorado Boulder</span>
+            <h3 class="cert-title">Approximation Algorithms &amp; Linear Programming</h3>
+            <span class="cert-date">Jun 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+      </div>
+
+      <div class="certs-group-label reveal">💻 Operating Systems</div>
+      <div class="certs-grid reveal">
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera S3BG6CEABNUM.pdf" data-issuer="Codio" data-title="Intro to Operating Systems 1: Virtualization" data-date="Mar 2025" data-verify="https://coursera.org/verify/S3BG6CEABNUM">
+          <div class="cert-icon">🖥</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Codio</span>
+            <h3 class="cert-title">Intro to OS 1: Virtualization</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera BWUNVD5ST3P7.pdf" data-issuer="Codio" data-title="Intro to Operating Systems 2: Memory Management" data-date="Mar 2025" data-verify="https://coursera.org/verify/BWUNVD5ST3P7">
+          <div class="cert-icon">🧮</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Codio</span>
+            <h3 class="cert-title">Intro to OS 2: Memory Management</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera ZTUO0TQM7K7O.pdf" data-issuer="Codio" data-title="Intro to Operating Systems 3: Concurrency" data-date="Apr 2025" data-verify="https://coursera.org/verify/ZTUO0TQM7K7O">
+          <div class="cert-icon">🔄</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Codio</span>
+            <h3 class="cert-title">Intro to OS 3: Concurrency</h3>
+            <span class="cert-date">Apr 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera T5IX718Z7YGM.pdf" data-issuer="Illinois Tech" data-title="Hardware and Operating System Foundations III" data-date="Mar 2025" data-verify="https://coursera.org/verify/T5IX718Z7YGM">
+          <div class="cert-icon">🔩</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Illinois Tech</span>
+            <h3 class="cert-title">Hardware &amp; OS Foundations III</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+      </div>
+
+      <div class="certs-group-label reveal">🎨 Design Thinking Courses</div>
+      <div class="certs-grid reveal">
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera C6FSW2X1C54Y.pdf" data-issuer="University of Virginia" data-title="Design Thinking for Innovation" data-date="Mar 2025" data-verify="https://coursera.org/verify/C6FSW2X1C54Y">
+          <div class="cert-icon">💡</div>
+          <div class="cert-body">
+            <span class="cert-issuer">University of Virginia</span>
+            <h3 class="cert-title">Design Thinking for Innovation</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera 022VX4RA88TI.pdf" data-issuer="University of Virginia" data-title="Design Thinking: Insights to Inspiration" data-date="Mar 2025" data-verify="https://coursera.org/verify/022VX4RA88TI">
+          <div class="cert-icon">🔭</div>
+          <div class="cert-body">
+            <span class="cert-issuer">University of Virginia</span>
+            <h3 class="cert-title">Design Thinking: Insights to Inspiration</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera ZSSR2Y2Z5HU5.pdf" data-issuer="University of Virginia" data-title="Design Thinking: Ideas to Action" data-date="Jun 2025" data-verify="https://coursera.org/verify/ZSSR2Y2Z5HU5">
+          <div class="cert-icon">🚀</div>
+          <div class="cert-body">
+            <span class="cert-issuer">University of Virginia</span>
+            <h3 class="cert-title">Design Thinking: Ideas to Action</h3>
+            <span class="cert-date">Jun 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera GE3678DK4HAD.pdf" data-issuer="University of Virginia" data-title="Design Thinking: Discovery Tools" data-date="Jun 2025" data-verify="https://coursera.org/verify/GE3678DK4HAD">
+          <div class="cert-icon">🧭</div>
+          <div class="cert-body">
+            <span class="cert-issuer">University of Virginia</span>
+            <h3 class="cert-title">Design Thinking: Discovery Tools</h3>
+            <span class="cert-date">Jun 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+      </div>
+
+      <div class="certs-group-label reveal">📚 Other Courses</div>
+      <div class="certs-grid reveal">
+        <div class="cert-card glass" data-pdf="assets/certs/Coursera DMPF936LWT7A.pdf" data-issuer="Duke University" data-title="Think Again I: How to Understand Arguments" data-date="Mar 2025" data-verify="https://coursera.org/verify/DMPF936LWT7A">
+          <div class="cert-icon">🧩</div>
+          <div class="cert-body">
+            <span class="cert-issuer">Duke University</span>
+            <h3 class="cert-title">Think Again I: How to Understand Arguments</h3>
+            <span class="cert-date">Mar 2025</span>
+          </div>
+          <button class="cert-preview-btn">Preview</button>
+          <div class="cert-shine"></div>
+        </div>
+      </div>
+
     </div>
   </section>
 

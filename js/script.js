@@ -7,25 +7,93 @@
 
   const cursorDot = document.getElementById('cursorDot');
   const cursorRing = document.getElementById('cursorRing');
+  const cursorText = document.getElementById('cursorText');
   let mx = 0, my = 0, rx = 0, ry = 0;
+  let tx = 0, ty = 0;
 
   if (window.matchMedia('(pointer: fine)').matches) {
+
     document.addEventListener('mousemove', e => {
       mx = e.clientX; my = e.clientY;
       cursorDot.style.left = mx + 'px';
       cursorDot.style.top = my + 'px';
+      cursorText.style.left = mx + 'px';
+      cursorText.style.top = (my + 28) + 'px';
     });
+
     const animCursor = () => {
-      rx += (mx - rx) * 0.12;
-      ry += (my - ry) * 0.12;
+      rx += (mx - rx) * 0.14;
+      ry += (my - ry) * 0.14;
       cursorRing.style.left = rx + 'px';
       cursorRing.style.top = ry + 'px';
       requestAnimationFrame(animCursor);
     };
     animCursor();
-    document.querySelectorAll('a, button, .sk-badge, .proj-card, .contact-card, .cert-card').forEach(el => {
-      el.addEventListener('mouseenter', () => cursorRing.classList.add('hovered'));
-      el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovered'));
+
+    document.addEventListener('mousedown', () => {
+      cursorDot.classList.add('clicking');
+      cursorRing.classList.add('clicking');
+    });
+    document.addEventListener('mouseup', () => {
+      cursorDot.classList.remove('clicking');
+      cursorRing.classList.remove('clicking');
+    });
+
+    const setHover = (label) => {
+      cursorDot.classList.add('hovering');
+      cursorRing.classList.add('hovered');
+      if (label) {
+        cursorText.textContent = label;
+        cursorText.style.opacity = '1';
+      }
+    };
+    const clearHover = () => {
+      cursorDot.classList.remove('hovering');
+      cursorRing.classList.remove('hovered');
+      cursorText.style.opacity = '0';
+      cursorText.textContent = '';
+    };
+
+    document.querySelectorAll('a[href^="http"], a[target="_blank"]').forEach(el => {
+      el.addEventListener('mouseenter', () => setHover('visit'));
+      el.addEventListener('mouseleave', clearHover);
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(el => {
+      el.addEventListener('mouseenter', () => setHover('go'));
+      el.addEventListener('mouseleave', clearHover);
+    });
+    document.querySelectorAll('.proj-card, .project-featured').forEach(el => {
+      el.addEventListener('mouseenter', () => setHover('view'));
+      el.addEventListener('mouseleave', clearHover);
+    });
+    document.querySelectorAll('.cert-preview-btn').forEach(el => {
+      el.addEventListener('mouseenter', () => setHover('open'));
+      el.addEventListener('mouseleave', clearHover);
+    });
+    document.querySelectorAll('.btn-resume, .cta-primary, .cta-secondary, a[download]').forEach(el => {
+      el.addEventListener('mouseenter', () => setHover('get'));
+      el.addEventListener('mouseleave', clearHover);
+    });
+    document.querySelectorAll('.sk-badge').forEach(el => {
+      el.addEventListener('mouseenter', () => setHover('skill'));
+      el.addEventListener('mouseleave', clearHover);
+    });
+    document.querySelectorAll('.hack-card, .exp-card').forEach(el => {
+      el.addEventListener('mouseenter', () => setHover('read'));
+      el.addEventListener('mouseleave', clearHover);
+    });
+    document.querySelectorAll('button:not(.cert-preview-btn):not(.hamburger):not(.back-to-top)').forEach(el => {
+      el.addEventListener('mouseenter', () => setHover('click'));
+      el.addEventListener('mouseleave', clearHover);
+    });
+
+    document.addEventListener('mouseleave', () => {
+      cursorDot.style.opacity = '0';
+      cursorRing.style.opacity = '0';
+    });
+    document.addEventListener('mouseenter', () => {
+      cursorDot.style.opacity = '1';
+      cursorRing.style.opacity = '1';
     });
   }
 
@@ -188,5 +256,61 @@
   };
   if (heroName) fadeIn(heroName, 0.2);
   heroEls.forEach((el, i) => fadeIn(el, 0.4 + i * 0.12));
+
+  const modal = document.getElementById('certModal');
+  const modalBackdrop = document.getElementById('certModalBackdrop');
+  const modalClose = document.getElementById('certModalClose');
+  const modalFrame = document.getElementById('modalFrame');
+  const modalIssuer = document.getElementById('modalIssuer');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDate = document.getElementById('modalDate');
+  const modalVerify = document.getElementById('modalVerify');
+
+  function openCertModal(card) {
+    const pdf = card.getAttribute('data-pdf');
+    const issuer = card.getAttribute('data-issuer');
+    const title = card.getAttribute('data-title');
+    const date = card.getAttribute('data-date');
+    const verify = card.getAttribute('data-verify');
+
+    modalIssuer.textContent = issuer;
+    modalTitle.textContent = title;
+    modalDate.textContent = date;
+    modalVerify.href = verify || '#';
+
+    if (pdf) {
+      modalFrame.src = pdf + '#toolbar=0&navpanes=0&scrollbar=0&view=FitH';
+    } else {
+      modalFrame.src = '';
+      modalFrame.style.height = '120px';
+      modalFrame.srcdoc = `<div style="display:flex;align-items:center;justify-content:center;height:100%;background:#0d1224;color:#94a3b8;font-family:sans-serif;font-size:0.85rem;padding:24px;text-align:center;">Specialization certificate — verify online via the link below.</div>`;
+    }
+
+    modal.classList.add('open');
+    document.body.classList.add('no-scroll');
+  }
+
+  function closeCertModal() {
+    modal.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+    setTimeout(() => { modalFrame.src = ''; }, 300);
+  }
+
+  document.querySelectorAll('.cert-preview-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openCertModal(btn.closest('.cert-card'));
+    });
+  });
+
+  modalClose.addEventListener('click', closeCertModal);
+  modalBackdrop.addEventListener('click', closeCertModal);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeCertModal();
+  });
+
+  document.querySelectorAll('.cert-modal-preview iframe').forEach(f => {
+    f.addEventListener('contextmenu', e => e.preventDefault());
+  });
 
 })();
