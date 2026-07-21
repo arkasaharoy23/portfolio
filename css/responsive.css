@@ -28,6 +28,10 @@
     gap: 28px;
   }
 
+  .proj-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 40px;
